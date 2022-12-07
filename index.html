@@ -6,9 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Arquivos/css/style.css"> <!--Link css-->
     
-    <title>Lista de Tarefas</title>
+    <title>Lista de Tarefas</title> <!--Título da guia/aba do navegador-->
 </head>
 <body>
+    <div class="container"> <!--Container que irá conter todo o projeto-->
+        <header>Lista de Tarefas</header> <!--Cabeçalho-->
+        <div class="campoInput">
+            <input type="text" placeholder="Adicionar Nova Tarefa">
+            <button>Add</button> <!--Botão de adicionar novas tarefas-->
+        </div>
+
+        <ul class="listaDeTarefas"> <!--Lista e seus respectivos itens-->
+            <li>Estudar HTML <span class="icon">X</span></li>
+            <li>Estudar CSS <span class="icon">X</span></li>
+            <li>Estudar JavaScript <span class="icon">X</span></li>
+            <li>Desenvolver Projeto <span class="icon">X</span></li>
+            <li>Beber Água <span class="icon">X</span></li>
+        </ul>
+
+        <footer class="rodape"> <!--Rodapé irá armazenar o aviso de tarefas pendentes e o botão de limpar tudo-->
+            <span>Você tem <span class="tarefasPendentes"></span>tarefas pendentes</span>
+            <button>Limpar Tudo</button>
+        </footer>
+    </div>
+
+    <script src="./Arquivos/js/script.js"></script> <!--Link para arquivo externo JS-->
     
 </body>
 </html>
