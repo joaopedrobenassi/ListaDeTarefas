@@ -51,6 +51,7 @@ body {
     border: none;
     color: #ffff;
     background-color: rgb(71, 189, 71);
+    transition: all 0.3s;
     margin-left: 5px;
     font-size: 21px;
     outline: none;
@@ -58,6 +59,65 @@ body {
     border-radius: 3px;
     opacity: 0.5;
  }
- .campoInput button:active{
+ .campoInput button:hover{
     opacity: 1;
  }
+ .campoInput button:active{
+    opacity: 0.5;
+ }
+ .container .listaDeTarefas {
+    max-height: 250px;
+    overflow-y: auto; /* Como será exibido o conteudo caso for cortado */
+ }
+.listaDeTarefas li {
+    position: relative;
+    list-style: none;
+    margin-bottom: 8px;
+    background-color: #f2f2f2;
+    border-radius: 3px;
+    padding: 10px 15px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.listaDeTarefas li .icon {
+    position: absolute;
+    right: -45px;
+    top: 50%;
+    transform: translatey(-50%);
+    background-color: red;
+    text-align: center;
+    padding:  10px 15px;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.listaDeTarefas li:hover .icon {
+    right: 0px;
+}
+footer {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer button {
+    padding: 6px 10px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 400px;
+    margin-left: 5px;
+    background-color: rgb(42, 42, 250);
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+footer button:hover {
+    opacity: 1;
+}
+footer button:active{
+    opacity: 0.5;
+}
