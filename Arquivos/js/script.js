@@ -29,5 +29,19 @@ botaoAdd.onlick = () => { //Quano o usuário apertar o botão irá ocorres essa 
 
 }
 function mostrarTarefas() {
-    
+    let getLocalStorageData = localStorage.getItem('Nova Tarefa') //Pegando item indicado por essa chave
+    if(getLocalStorageData == null){
+        listArray = []
+    }else {
+        listArray = JSON.parse(getLocalStorageData)
+    }
+    const numeroTarefasPendentes = document.querySelector('.tarefasPendentes')
+    numeroTarefasPendentes.textContent = listArray.length
+    if(listArray.length > 0){
+        botaoLimpar.classList.add('active')
+    }else {
+        botaoLimpar.classList.remove('active')
+    }
+
+
 }
